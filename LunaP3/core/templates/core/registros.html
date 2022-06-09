@@ -20,6 +20,7 @@
     <div class="container">
         <h1>LISTADO DE PRODUCTOS </h1>
         <div class="row">
+            <a href="{% url 'registros_new_producto' %}">Nuevo Producto</a>
             <table class="table">
                 <thead>
                     <tr>
@@ -50,7 +51,7 @@
                     {% endfor%}
                 </tbody>
             </table>
-            <a href="{% url 'registros_new_producto' %}">Nuevo Producto</a>
+
         </div>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
