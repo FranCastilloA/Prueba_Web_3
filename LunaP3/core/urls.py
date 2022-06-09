@@ -1,10 +1,14 @@
 from django.urls import path
-from .views import index, nosotros, catalogo, formulario
+from .views import index, nosotros, catalogo, formulario, registros, registros_new_producto, registros_mod_producto
 
 urlpatterns = [
     path('',index,name='index'),
+    #path('',registros,name='registros'),
     path('index.html',index,name='index'),
     path('Nosotros.html',nosotros,name='nosotros'),
     path('Catalogo.html',catalogo,name='catalogo'),
     path('Formulario.html',formulario,name='formulario'),
+    path('registros,html',registros,name='registros'),
+    path('registros_new_producto.html',registros_new_producto,name='registros_new_producto'),
+    path('registros_mod_producto.html/<id>',registros_mod_producto,name='registros_mod_producto'),
 ]
