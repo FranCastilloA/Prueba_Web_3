@@ -8,4 +8,6 @@ class ProductoForm(ModelForm):
         model = Producto
         fields = ['sku','nombreProducto','precio','stock','descripcion','imagen','categoria',]
 
+
+
         
