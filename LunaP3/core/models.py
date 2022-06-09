@@ -11,7 +11,7 @@ class Categoria(models.Model):
     nombreCategoria = models.CharField(max_length=50, verbose_name='Nombre de la categoria')
 
     def __str__(self):
-        return self.idCategoria
+        return self.nombreCategoria
 
 #Modelo para Producto
 
@@ -21,9 +21,10 @@ class Producto(models.Model):
     nombreProducto = models.CharField(max_length=50, verbose_name='Nombre de Producto')
     precio = models.IntegerField(null=False, blank=False, verbose_name='Precio Producto')
     stock = models.IntegerField(null=False, blank=False,verbose_name='Stock Producto')
-    descripcion = models.CharField(max_length=50, verbose_name='Descripcion Producto')
+    descripcion = models.CharField(max_length=250, verbose_name='Descripcion Producto')
+    imagen = models.CharField(null=True, blank=True, max_length=250, verbose_name='Descripcion Producto')
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.sku
+        return self.nombreProducto
 
