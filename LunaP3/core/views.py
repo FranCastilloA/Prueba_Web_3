@@ -22,10 +22,6 @@ def catalogo(request):
     
     return render(request, 'core/Catalogo.html')
 
-def tienda(request):
-    
-    return render(request, 'core/Tienda.html')    
-
 
 def formulario(request):
     
@@ -84,4 +80,12 @@ def registros_mod_producto(request, id):
             datos['mensaje'] = "Modificados correctamente"
 
     return render(request, 'core/registros_mod_producto.html', datos)
+
+
+def tienda(request):
+    productos = Producto.objects.all()
+    datos = {
+        'productos': productos
+    }
+    return render(request, 'core/tienda.html', datos)
 
