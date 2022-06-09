@@ -22,6 +22,10 @@ def catalogo(request):
     
     return render(request, 'core/Catalogo.html')
 
+def tienda(request):
+    
+    return render(request, 'core/Tienda.html')    
+
 
 def formulario(request):
     

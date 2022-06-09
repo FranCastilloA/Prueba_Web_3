@@ -13,6 +13,14 @@
 
     <link rel="icon" href="IMAGENES/logoIcono.ico">
 
+     <!-- Cargamos static-->
+     {% load static %}
+
+     <!-- CSS Custom-->
+     <link rel="stylesheet" href="{% static 'core/css/index.css' %}" ></link>
+ 
+     <link rel="icon" href="{% static 'core/img/logoIcono.ico' %}">
+
     <title>Luna Peluda</title>
   </head>
   <body>
@@ -36,7 +44,7 @@
                   <nav class="navbar navbar-light ">
                       <div class="container">
                         <a class="navbar-brand" href="index.html">
-                          <img src="Imagenes/logo.png" alt="" width="50" height="50">
+                          <img src="{% static 'core/img/logo.png' %}" alt="" width="80" height="80">
                           Luna Peluda
                         </a>
                       </div>
@@ -53,10 +61,10 @@
                       <a class="nav-link" href="Nosotros.html">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="Catalogo.html">Catálogo</a>
+                      <a class="nav-link" href="Catalogo.html">Tienda</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="Formulario.html">Registrate Aquí</a>
+                      <a class="nav-link" href="Formulario.html">Registrarse</a>
                     </li>
                   </ul>
                   <form class="d-flex">
@@ -73,7 +81,7 @@
             <!-- Imagen y texto pagina Nosotros-->
             <div class = "container" >
               <div class="row" >
-                <div class="col-sm-6"> <img src="Imagenes/amigas.png" alt="" width="400" height="400">
+                <div class="col-sm-6"> <img src="{% static 'core/img/amigas.png' %}" alt="" width="500" height="400">
                 </div>
                 <div class="col-sm-6"> Hola, somos 2 amigas que vendemos productos para nuestras mascotas, y todos los ingresos van directo a una fundacion sin fines de lucro! <br> <br>
                   Lo que comenzo como un simple hobby, se ha convertido en una gran oportunidad para mucha gente y personas, muchas gracias por todo!<br><br> Cualquier consulta o informacion pueden contactarnos en estos numeros:<br><br> Tamara: +569 88757790 <br> Linda: +569 33477543
