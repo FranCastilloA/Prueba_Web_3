@@ -82,6 +82,17 @@ def registros_mod_producto(request, id):
     return render(request, 'core/registros_mod_producto.html', datos)
 
 
+def registros_del_producto(request, id):
+    #el id es el identificador de la tabla productos
+    #buscara los datos en la base de datos
+    producto = Producto.objects.get(sku=id)
+    #eliminamos el producto del id buscado
+    producto.delete()
+    #ahora redirigimos a home con el listado
+    return redirect(to="registros")
+
+
+
 def tienda(request):
     productos = Producto.objects.all()
     datos = {

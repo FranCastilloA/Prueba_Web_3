@@ -29,7 +29,9 @@
                         <th scope="col">STOCK</th>
                         <th scope="col">DESCRIPCION</th>
                         <th scope="col">URL IMAGEN</th>
+                        <th scope="col">CATEGORIA</th>
                         <th scope="col">OPCIONES</th>
+                        <th scope="col">DISPONIBLES</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,13 +43,14 @@
                         <td>{{pd.stock}}</td>
                         <td>{{pd.descripcion}}</td>
                         <td>{{pd.imagen}}</td>
+                        <td>{{pd.categoria}}</td>
                         <td><a href="{% url 'registros_mod_producto' pd.sku %}">Modificar</a></td>
-                        <td><a href="">Eliminar</a></td>
+                        <td><a href="{% url 'registros_del_producto' pd.sku %}">Eliminar</a></td>
                     </tr>
                     {% endfor%}
                 </tbody>
             </table>
-            <a href="{% url 'registros_new_producto' %}">Nuevo registro</a>
+            <a href="{% url 'registros_new_producto' %}">Nuevo Producto</a>
         </div>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
