@@ -12,4 +12,5 @@ urlpatterns = [
     path('registros_new_producto.html',registros_new_producto,name='registros_new_producto'),
     path('registros_mod_producto.html/<id>',registros_mod_producto,name='registros_mod_producto'),
     path('registros_del_producto/<id>', registros_del_producto, name="registros_del_producto"),
+    #path('Tienda2.html',tienda2,name='tienda2'),
 ]

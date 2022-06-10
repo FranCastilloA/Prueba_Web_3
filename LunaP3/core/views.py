@@ -100,3 +100,10 @@ def tienda(request):
     }
     return render(request, 'core/tienda.html', datos)
 
+#def tienda2(request):
+#    productos = Producto.objects.all()
+#    datos = {
+#        'productos': productos
+#    }
+#    return render(request, 'core/tienda2.html', datos)
+
